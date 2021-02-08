@@ -18,7 +18,7 @@ dia_da_semana = agora.weekday()
 imagem = "gyro.png"
 
 while True:
-    if dia_da_semana == 0:
+    if dia_da_semana == 2:
         api.update_with_media(imagem)
     
     time.sleep(86399)
