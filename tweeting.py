@@ -15,7 +15,7 @@ tweet.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(tweet)
 agora = datetime.today()
 dia_da_semana = agora.weekday()
-imagem = "twitter_bot\\gyro.png"
+imagem = "gyro.png"
 
 while True:
     if dia_da_semana == 0:
