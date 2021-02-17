@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from os import environ
 import tweepy
 import time
@@ -13,16 +13,12 @@ tweet = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 tweet.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
 api = tweepy.API(tweet)
-agora = datetime.datetime.today()
-dia_da_semana = agora.weekday()
+agora = datetime.today()
+dia_da_semana = agora.strftime("%A")
 imagem = "gyro.png"
 
-dia_semana_lista = [
-"segunda", "terça",
-"quarta", "quinta", "sexta"]
-
 while True:
-    if dia_semana_lista[dia_da_semana] == "quarta":
+    if dia_da_semana == "Wednesday":
         api.update_with_media(imagem)
     
     time.sleep(86399)
