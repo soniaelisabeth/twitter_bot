@@ -7,9 +7,9 @@ chatterbot-corpus==1.2.0
 click==7.1.2
 colorama==0.4.3
 comtypes==1.1.7
+DateTime==4.3
 distlib==0.3.1
 filelock==3.0.12
-Flask==1.1.2
 idna==2.10
 isort==4.3.21
 itsdangerous==1.1.0
@@ -19,6 +19,7 @@ MarkupSafe==1.1.1
 mathparse==0.1.2
 mccabe==0.6.1
 oauthlib==3.1.0
+pause==0.3
 psycopg2-binary==2.8.6
 pylint==2.5.3
 PySocks==1.7.1
