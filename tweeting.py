@@ -21,5 +21,4 @@ imagem = "gyro.png"
 while True:
     if dia_da_semana.weekday() == 2:
         api.update_with_media(imagem)
-    
     pause.weeks(1)
