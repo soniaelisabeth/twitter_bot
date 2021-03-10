@@ -11,14 +11,15 @@ ACCESS_SECRET = environ['ACCESS_SECRET']
     
 tweet = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 tweet.set_access_token(ACCESS_KEY, ACCESS_SECRET)
-
 api = tweepy.API(tweet)
+
 agora = datetime.today()
-dia_da_semana = agora.strftime("%A")
+local_tz = pytz.timezone('America/Fortaleza')
+dia_da_semana = local_tz.localize(agora)
 imagem = "gyro.png"
 
 while True:
-    if dia_da_semana == "Wednesday":
+    if dia_da_semana.weekday() == 2:
         api.update_with_media(imagem)
     
-    time.sleep(86399)
+    pause.weeks(1)
